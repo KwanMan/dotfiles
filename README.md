@@ -4,26 +4,20 @@
 # install brew (https://brew.sh)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# get a usable terminal
-brew cask install iterm2
+# install useful stuff
+brew install yarn --without-node
+brew cask install iterm2 homebrew/cask-versions/firefox-developer-edition spectacle visual-studio-code
 
 # install oh my zsh (https://ohmyz.sh)
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# copy over .zshrc
-
-# source .zshrc to install nvm
-
-# zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting)
+# oh-my-zsh plugins
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 brew install zsh-syntax-highlighting
 
-brew install yarn --without-node
-
 # setup git
-git config --global user.name="Tommy Kwan"
-git config --global user.email="tkwan196@gmail.com"
+git config --global user.name "Tommy Kwan"
+git config --global user.email "tkwan196@gmail.com"
 
-brew cask install homebrew/cask-versions/firefox-developer-edition
-brew cask install spectacle
-brew cask install visual-studio-code
+# copy over .zshrc
 ```
