@@ -6,7 +6,7 @@
 
 # install useful stuff
 brew install yarn --without-node
-brew cask install iterm2 homebrew/cask-versions/firefox-developer-edition spectacle visual-studio-code
+brew cask install iterm2 homebrew/cask-versions/firefox-developer-edition spectacle visual-studio-code docker
 
 # install oh my zsh (https://ohmyz.sh)
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
