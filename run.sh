@@ -1,19 +1,26 @@
 #!/bin/sh
 
 print () {
-    echo ""
-    echo "->"
-    echo "--->"
-    echo "----->"
-    echo "-------> ${1}"
-    echo "----->"
-    echo "--->"
-    echo "->"
-    echo ""
+  echo ""
+  echo "->"
+  echo "--->"
+  echo "----->"
+  echo "-------> ${1}"
+  echo "----->"
+  echo "--->"
+  echo "->"
+  echo ""
 }
 
-print "First things first, can't function without brew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ ! -f $HOME/.ssh/id_rsa ]; then
+  print "Generating SSH key"
+  ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/id_rsa"
+fi
+
+if [ -z "$(type -fp brew)" ]; then
+  print "First things first, can't function without brew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 print "Let's get a better terminal setup"
 brew cask install iterm2
