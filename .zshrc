@@ -1,4 +1,4 @@
-export ZSH="/Users/tommykwan/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="avit"
 ZSH_THEME="ys"
@@ -9,10 +9,6 @@ export UPDATE_ZSH_DAYS=7
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(
-  # https://github.com/lukechilds/zsh-nvm
-  zsh-nvm
-)
 source $ZSH/oh-my-zsh.sh
 
 # . `brew --prefix`/etc/profile.d/z.sh
@@ -31,16 +27,16 @@ alias dp="make deploy-production"
 alias ds="make deploy-staging"
 alias kp="kubectl --context=aws-eu-prd"
 alias ks="kubectl --context=aws-eu-stg"
+alias clean-baton="rm **/baton.npmrc"
 
 # system cleanup
 alias clean-docker="docker system prune -a"
 alias clean-brew="brew cleanup ; rm -rf $(brew --cache)"
-alias clean-baton="rm **/baton.npmrc"
 
 # git
 alias gcm="git checkout master"
 alias gcb="git checkout -b"
-alias gc="git checkout"
+alias gco="git checkout"
 alias gb="git branch"
 
 alias glog="git --no-pager log --oneline --pretty=oneline"
@@ -49,9 +45,10 @@ alias gst="git status"
 alias gclean="git clean -dfx && git reset --hard"
 alias gl="git pull"
 
-alias gcommit="git add --all && git commit -m"
-alias gamend="git add --all && git commit --amend --no-edit"
-alias gp='git push origin $(git_current_branch) -u'
+alias gaa="git add --all"
+alias gcmsg="git commit -m"
+alias gamend="git commit --amend"
+alias gp='git push origin $(git_current_branch)'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
