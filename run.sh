@@ -38,10 +38,12 @@ source ~/.nvm/nvm.sh
 nvm install 10
 
 print "The rest of your homely dev setup"
+mkdir -p ~/dev
 git config --global user.name "Tommy Kwan"
 git config --global user.email "tkwan196@gmail.com"
 brew install yarn --without-node
 brew cask install homebrew/cask-versions/firefox-developer-edition
+brew cask install google-chrome-canary
 brew cask install visual-studio-code
 brew cask install docker
 brew cask install google-cloud-sdk
