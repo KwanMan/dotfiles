@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="avit"
-ZSH_THEME="ys"
+ZSH_THEME="juanghurtado"
 HYPHEN_INSENSITIVE="true"
 export UPDATE_ZSH_DAYS=7
 # ENABLE_CORRECTION="true"
@@ -17,8 +17,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias dev="cd ~/dev"
-alias ll="ls -lh"
-alias lal="ls -lah"
+alias ll="ls -lah"
 
 # qubit
 alias sql-proxy-stg="cloud_sql_proxy -instances=qubit-apps-eu-stg:europe-west1:staging=tcp:3307"
@@ -46,7 +45,7 @@ alias gclean="git clean -dfx && git reset --hard"
 alias gl="git pull"
 
 alias gaa="git add --all"
-alias gcmsg="git commit -m"
+alias gc="git commit -m"
 alias gamend="git commit --amend"
 alias gp='git push origin $(git_current_branch)'
 
