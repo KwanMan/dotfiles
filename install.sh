@@ -12,6 +12,10 @@ print () {
   echo ""
 }
 
+print "Cloning repo"
+mkdir -p ~/dev/dotfiles
+git clone https://github.com/KwanMan/dotfiles.git ~/dev/dotfiles
+
 if [ ! -f $HOME/.ssh/id_rsa ]; then
   print "Generating SSH key"
   ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/id_rsa"
@@ -28,7 +32,7 @@ brew install zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 brew install zsh-syntax-highlighting
-cp ./.zshrc ~/.zshrc
+ls -s ~/dev/dotfiles/.zshrc ~/.zshrc
 
 print "Node is the future, installing nvm"
 # We added a NVM auto updater above, but we manually install it first
@@ -38,7 +42,6 @@ source ~/.nvm/nvm.sh
 nvm install 10
 
 print "The rest of your homely dev setup"
-mkdir -p ~/dev
 git config --global user.name "Tommy Kwan"
 git config --global user.email "tkwan196@gmail.com"
 brew install yarn --without-node
