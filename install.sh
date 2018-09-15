@@ -32,7 +32,7 @@ brew install zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 brew install zsh-syntax-highlighting
-ls -s ~/dev/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
 
 print "Node is the future, installing nvm"
 # We added a NVM auto updater above, but we manually install it first
