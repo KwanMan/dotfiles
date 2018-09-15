@@ -12,6 +12,9 @@ print () {
   echo ""
 }
 
+print "Installing command line dev tools"
+xcode-select --install
+
 print "Cloning repo"
 mkdir -p ~/dev/dotfiles
 git clone https://github.com/KwanMan/dotfiles.git ~/dev/dotfiles
