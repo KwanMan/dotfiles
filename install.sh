@@ -27,11 +27,27 @@ if [ -z "$(type -fp brew)" ]; then
 fi
 
 print "Let's get a better terminal setup"
+
+# install iterm
 brew cask install iterm2
+mkdir -p ~/Library/Application\ Support/iTerm2/DynamicProfiles
+ln -s ~/dev/dotfiles/iterm2.json ~/Library/Application\ Support/iTerm2/DynamicProfiles/iterm2.json
+
 brew install zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+# install plugins
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 brew install zsh-syntax-highlighting
+
+# install theme
+git clone https://github.com/powerline/fonts.git --depth=1 ~/dev/powerline-fonts
+~/dev/powerline-fonts/install.sh
+rm -rf ~/dev/powerline-fonts
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# symlink .zshrc
 ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
 
 print "Node is the future, installing nvm"
