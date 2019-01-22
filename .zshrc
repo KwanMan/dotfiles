@@ -94,7 +94,7 @@ alias glog="git --no-pager log --oneline --pretty=oneline"
 alias gst="git status"
 
 alias gclean="git clean -dfx && git reset --hard"
-alias gl="git pull"
+alias gl="git pull origin $(git_current_branch)"
 
 alias gaa="git add --all"
 alias gc="git commit -m"
