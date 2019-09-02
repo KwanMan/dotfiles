@@ -53,9 +53,9 @@ ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
 print "Node is the future, installing nvm"
 # We added a NVM auto updater above, but we manually install it first
 # here so we can install node in this script
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 source ~/.nvm/nvm.sh
-nvm install 10
+nvm install 12
 
 print "The rest of your homely dev setup"
 git config --global user.name "Tommy Kwan"
