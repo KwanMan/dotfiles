@@ -68,37 +68,37 @@ source $ZSH/oh-my-zsh.sh
 # https://github.com/zsh-users/zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias dev="cd ~/dev"
-alias ll="ls -lah"
+alias dev='cd ~/dev'
+alias ll='ls -lah'
 
 # qubit
-alias sql-proxy-stg="cloud_sql_proxy -instances=qubit-apps-eu-stg:europe-west1:staging=tcp:3307"
-alias sql-proxy-qfn="cloud_sql_proxy -instances=qubit-apps-eu-prod:europe-west1:qfn=tcp:3307"
-alias dp="make deploy-production"
-alias ds="make deploy-staging"
-alias kp="kubectl --context=aws-eu-prd"
-alias ks="kubectl --context=aws-eu-stg"
-alias clean-baton="rm **/baton.npmrc"
+alias sql-proxy-stg='cloud_sql_proxy -instances=qubit-apps-eu-stg:europe-west1:staging=tcp:3307'
+alias sql-proxy-qfn='cloud_sql_proxy -instances=qubit-apps-eu-prod:europe-west1:qfn=tcp:3307'
+alias dp='make deploy-production'
+alias ds='make deploy-staging'
+alias kp='kubectl --context=aws-eu-prd'
+alias ks='kubectl --context=aws-eu-stg'
+alias clean-baton='rm **/baton.npmrc'
 
 # system cleanup
-alias clean-docker="docker system prune -a"
-alias clean-brew="brew cleanup ; rm -rf $(brew --cache)"
+alias clean-docker='docker system prune -a'
+alias clean-brew='brew cleanup ; rm -rf $(brew --cache)'
 
 # git
-alias gcm="git checkout master"
-alias gcb="git checkout -b"
-alias gco="git checkout"
-alias gb="git branch"
+alias gcm='git checkout master'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gb='git branch'
 
-alias glog="git --no-pager log --oneline --pretty=oneline"
-alias gst="git status"
+alias glog='git --no-pager log --oneline --pretty=oneline'
+alias gst='git status'
 
-alias gclean="git clean -dfx && git reset --hard"
-alias gl="git pull origin $(git_current_branch)"
+alias gclean='git clean -dfx && git reset --hard'
+alias gl='git pull origin $(git_current_branch)'
 
-alias gaa="git add --all"
-alias gc="git commit -m"
-alias gam="git commit --amend"
+alias gaa='git add --all'
+alias gc='git commit -m'
+alias gam='git commit --amend'
 alias gp='git push origin $(git_current_branch)'
 alias grbm='git rebase master'
 
@@ -110,5 +110,4 @@ export NVM_DIR="$HOME/.nvm"
 # ruby
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile #to enable shims and auto-complete
-
 
