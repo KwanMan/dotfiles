@@ -45,7 +45,7 @@ git clone https://github.com/powerline/fonts.git --depth=1 ~/dev/powerline-fonts
 ~/dev/powerline-fonts/install.sh
 rm -rf ~/dev/powerline-fonts
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme"
 
 # symlink .zshrc
 ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
