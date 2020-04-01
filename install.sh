@@ -53,7 +53,7 @@ ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
 print "Node is the future, installing nvm"
 # We added a NVM auto updater above, but we manually install it first
 # here so we can install node in this script
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install 12
 
@@ -61,8 +61,7 @@ print "The rest of your homely dev setup"
 git config --global user.name "Tommy Kwan"
 git config --global user.email "tkwan196@gmail.com"
 brew install yarn --without-node
-brew cask install homebrew/cask-versions/firefox-developer-edition
-brew cask install google-chrome-canary
+brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install docker
 brew cask install google-cloud-sdk
@@ -72,6 +71,8 @@ brew cask install spectacle
 brew cask install spotify
 brew cask install telegram
 brew cask install whatsapp
+brew cask install slack
+brew cask install discord
 
 print "All done, now sending you to your new shell"
 chsh -s /bin/zsh
