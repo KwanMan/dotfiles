@@ -74,11 +74,14 @@ alias ll='ls -lah'
 # qubit
 alias sql-proxy-stg='cloud_sql_proxy -instances=qubit-apps-eu-stg:europe-west1:staging=tcp:3307'
 alias sql-proxy-qfn='cloud_sql_proxy -instances=qubit-apps-eu-prod:europe-west1:qfn=tcp:3307'
+alias sql-proxy-atom='cloud_sql_proxy -instances=qubit-apps-eu-prod:europe-west1:atom=tcp:3307'
+alias sql-proxy-configurator='cloud_sql_proxy -instances=qubit-apps-eu-prod:europe-west1:configurator=tcp:3307'
 alias dp='make deploy-production'
 alias ds='make deploy-staging'
 alias kp='kubectl --context=aws-eu-prd'
 alias ks='kubectl --context=aws-eu-stg'
 alias clean-baton='rm **/baton.npmrc'
+
 
 # system cleanup
 alias clean-docker='docker system prune -a'
@@ -93,6 +96,7 @@ alias gb='git branch'
 alias glog='git --no-pager log --oneline --pretty=oneline'
 alias gst='git status'
 
+alias gcbranches='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 alias gclean='git clean -dfx && git reset --hard'
 alias gl='git pull origin $(git_current_branch)'
 
