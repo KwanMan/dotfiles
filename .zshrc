@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
 
 # https://denysdovhan.com/spaceship-prompt/
@@ -81,7 +82,7 @@ alias ds='make deploy-staging'
 alias kp='kubectl --context=aws-eu-prd'
 alias ks='kubectl --context=aws-eu-stg'
 alias clean-baton='rm **/baton.npmrc'
-
+alias qubit-watch='nodemon --watch ./ --ext js,less --exec "qubit push"'
 
 # system cleanup
 alias clean-docker='docker system prune -a'
@@ -112,8 +113,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # ruby
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile #to enable shims and auto-complete
+# echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+# echo 'eval "$(rbenv init -)"' >> ~/.bash_profile #to enable shims and auto-complete
 
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -135,3 +136,5 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+export PATH="/Users/tommy/.deno/bin:$PATH"
